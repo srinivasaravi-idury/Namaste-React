@@ -1,1 +1,0 @@
-console.log("Jai Shree Ganesha, Jai Shree Ram")
