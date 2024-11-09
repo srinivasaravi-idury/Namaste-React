@@ -2,7 +2,6 @@ import { CDN_URL } from "../utils/contants";
 const RestoCards = ({ restoData }) => {
   const { cloudinaryImageId, name, costForTwo, avgRating, cuisines, locality } =
     restoData.info;
-  console.log(restoData);
   return (
     <div className="resto-card">
       <img src={CDN_URL + cloudinaryImageId} alt="resto-image" />

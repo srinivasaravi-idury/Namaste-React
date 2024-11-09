@@ -26,6 +26,19 @@
     margin: 10px;
 }
 
+.filter{
+    display: flex;
+    margin: 5px;
+}
+
+.search{
+    padding: 5px;
+
+}
+.filter-btn{
+    padding: 5px;
+}
+
 /*Body*/
 .body{
     margin: 20px 50px;
