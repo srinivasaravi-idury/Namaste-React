@@ -1,29 +1,46 @@
 import { LOGO_URL } from "../utils/contants";
-import { useState } from "react";
+import { useState,useContext } from "react";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "/src/utils/UserContext"
+
 const Header = () => {
+  const {loggedInUser} = useContext(UserContext);
   const [btnName, setBtnName] = useState("Login");
+  const onlineStatus = useOnlineStatus();
   return (
-    <div className="header">
-      <div className="logo-container">
-        <h2>Food App</h2>
-        <img className="logo" src={LOGO_URL} alt="app-logo" />
+    <div className="flex justify-between bg-gray-100 shadow-lg h-32">
+      <div className="p-4 flex items-center">
+        <h2 className="font-bold">Food App</h2>
+        <img className="p-4 w-28 " src={LOGO_URL} alt="app-logo" />
       </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact us</li>
-          <li>Cart</li>
-          <button
-            className="login-btn"
-            onClick={() => {
-              btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
-            }}
-          >
-            {btnName}
-          </button>
-        </ul>
-      </div>
+      <ul className="flex items-center">
+        <li className="px-4">
+          connection status: {onlineStatus ? "✅" : "🔴"}
+        </li>
+        <li className="px-4">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="px-4">
+          <Link to="/about">About us</Link>
+        </li>
+        <li className="px-4">
+          <Link to="/contact">Contact us</Link>
+        </li>
+        <li className="px-4">
+          <Link to="/grocery">Grocery</Link>
+        </li>
+        <li className="px-4">Cart</li>
+        <li className="px-4 font-bold">{loggedInUser}</li>
+        <button
+          className="px-4"
+          onClick={() => {
+            btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
+          }}
+        >
+          {btnName}
+        </button>
+      </ul>
     </div>
   );
 };

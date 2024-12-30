@@ -1,6 +1,6 @@
 {
-    "debug.javascript.terminalOptions": {
-        
-    },
-    "typescript.tsserver.nodePath": "C:\\Users\\Intel\\Documents\\GitHub\\Namaste-React\\react-appliction\\node_modules"
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.npm": null // Ensure this is unset or set to null
 }
