@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/srinivasaravi-idury/Namaste-React#readme",
   "devDependencies": {
+    "@testing-library/react": "^16.1.0",
     "parcel": "^2.12.0",
     "postcss": "^8.4.49",
     "process": "^0.11.10",

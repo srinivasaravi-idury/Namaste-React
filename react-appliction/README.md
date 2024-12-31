@@ -21,4 +21,7 @@ App components
 - - copyrightlinks
 - - social media links
 - - other links
-    \*/
+
+# Redux Toolkit
+    - install @reduxjs/toolkit
+    - build our store

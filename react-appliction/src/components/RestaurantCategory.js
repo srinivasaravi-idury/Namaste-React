@@ -1,5 +1,5 @@
-import RestaurantItem from "./RestaurantItem";
-import {useState} from 'react'
+import ItemList from "./ItemList";
+import {useState} from 'react';
 const RestaurantCategory = ({ items, showItems, setShowIndex }) => {
   const handleClick = () => {
     setShowIndex();
@@ -16,7 +16,7 @@ const RestaurantCategory = ({ items, showItems, setShowIndex }) => {
         <span>⬆</span>
       </div>
       <div>
-        {showItems && items?.itemCards.map((item) => <RestaurantItem item={item} />)}
+        {showItems && items?.itemCards.map((item) => <ItemList item={item} />)}
       </div>
     </div>
   );
