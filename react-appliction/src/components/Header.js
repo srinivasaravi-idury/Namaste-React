@@ -2,7 +2,7 @@ import { LOGO_URL } from "../utils/contants";
 import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "/src/utils/UserContext"
+import UserContext from "../utils/UserContext"
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -10,7 +10,6 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
   return (
     <div className="flex justify-between bg-gray-100 shadow-lg h-32">
       <div className="p-4 flex items-center">
